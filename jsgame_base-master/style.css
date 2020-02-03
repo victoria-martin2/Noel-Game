@@ -1,0 +1,91 @@
+#game {
+  position: relative;
+
+  width: 100%;
+  height: 80vh;
+
+  background: url("img/fond.png");
+  background-size: cover;
+  overflow: hidden;
+}
+
+#ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100px;
+
+  background: url("img/sol.png");
+  background-repeat: repeat-x;
+  background-size: contain;
+}
+
+#player {
+  position: absolute;
+  bottom: 400px;
+  left: 400px;
+
+  width: 100px;
+  height: 120px;
+
+  background: url("img/renne.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  transition: 2s;
+  transition-timing-function: ease-in;
+}
+
+.eagle {
+  position: absolute;
+  bottom: 100px;
+  right: 10px;
+
+  width: 60px;
+  height: 60px;
+
+  background: url("img/cadeau.png");
+  background-size: cover;
+  
+}
+
+.plane {
+  position: absolute;
+  bottom: 100px;
+  right: 10px;
+  
+  width: 130px;
+  height: 50px;
+
+  background: url("img/plane.png");
+  background-size: cover;
+  
+}
+
+
+
+#gameover {
+  color: red;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 150px;
+
+}
+
+#button button {
+	width:85px;
+	height:85px;
+	background:#cc0000;
+	font:bold 18px Arial;
+	border-radius:50%;
+	border:none;
+  color:#fff;
+}
+
+#button {
+  display: flex;
+  justify-content : center;
+  align-items : center;
+}
