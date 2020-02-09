@@ -11,6 +11,8 @@ let ground = document.querySelector("#ground");
 let enemies = document.querySelector("#enemies");
 let gameover = document.querySelector("#gameover");
 let enemies2 = document.querySelector("#enemies2");
+let button = document.querySelector("#button");
+let music = document.querySelector("#music");
 
 // some parameters
 // minimal margin to the bottom (in pixels)
@@ -37,7 +39,21 @@ let spawn, spawn2, motion, motion2, playerGravity;
 //  *** When game starts ***
 //  ****************************************************/
 
+function initialize(){
+  button.style.display = 'none';
+  button();
 
+  enemies.style.display = "block";
+  spawnEnemy();
+
+  enemies2.style.display = "block";
+  spawnEnemy2();
+
+  var intervalID = window.setInterval(spawnEnemy, 500);
+  var intervalID = window.setInterval(spawnEnemy2, 500);
+
+  music.play();
+}
 
 
 // enemy motion
@@ -184,4 +200,6 @@ function stopAll() {
   clearInterval(spawn2);
 
   gameover.style.display = "block";
+
+  // music.pause();
 }
